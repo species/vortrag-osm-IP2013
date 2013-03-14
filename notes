@@ -1,0 +1,123 @@
+was ist wichtig?
+
+OpenStreetMap - short OSM
+
+  Was -OK
+    free world map based on the 'Wiki'-principle
+    
+  Wer 
+    foundation,
+    users,
+      community
+      sotm
+    unis,
+      server, 
+    daten sponsern
+      firmen
+      regierungen
+    daten nutzen
+      firmen
+      user
+      unis
+
+  Wann: When
+    history
+
+  warum: Why OSM?
+    kommerzielle angebote zwar nutzbar, aber nur die gerenderten karten
+
+  Wie: How does OSM work?
+    1 central DB (postgres/postgis) for writes
+    this DB is mirrored all over the world for reads with different methods
+    - most rendering servers use a minutely updated local DB
+    - API read calls are load-balanced over multiple readonly servers
+    - excerpts for download see \href{http://wiki.osm.org/Planet}{wiki.osm.org/Planet}
+      - .dbf - binary file format, efficient compressed
+      - .osm.xml - standard OSM format
+      - ESRI Shapefile
+    - overpass API for VERY fast SQL-like calls directly on a DB, e.g. give me all pubs in Graz
+
+  Wie: How to use OSM
+    read
+      Use OSM Services directly
+        www.osm.org
+          \break
+          POI-search with Nominatim
+          4 different map styles
+          View data directly
+          View history of areas/objects
+          Edit with Potlatch (Flash)
+          \break
+        Websites showing special data: 
+          e.g.:
+            \href{http://www.openseamap.org/}{OpenSeaMap}
+            \href{http://wiki.openstreetmap.org/wiki/Wheelmap}{Wheelmap}
+            Cuisine in Restaurants: \href{http://www.opengastromap.de/?lat=47.07&lon=15.43&zoom=12}{opengastromap.de}
+            Smoker's Map: \href{http://toolserver.org/~stephankn/smoking/}{opengastromap.org}
+            \break
+            for >200 more, see \href{http://wiki.openstreetmap.org/wiki/List_of_OSM_based_Services}{wiki}
+
+
+        Routing:
+          OpenRouteService.org (+pedestrian, bike with profiles)
+          maps.cloudmade.com (+bike, pedestrian)
+          OSRM (atm car only)
+        Apps:
+          iPhone ( >60 )  \url{http://wiki.osm.org/Apple_iOS}
+          Android ( > 70) \url{http://wiki.osm.org/Android}
+          Blackberry ( 8 ) \url{http://wiki.osm.org/BlackBerry_OS}
+        Garmin
+
+      download data:
+        via APIs
+        from mirrors
+        
+      create themed Maps now easily with Overpass API:
+        Maxheight Map: http://maxheight.bplaced.net/overpass/prototyp.html
+        Bicycle Themed: http://mijndev.openstreetmap.nl/~ligfietser/fiets/
+        <screenshot>
+        Turn Restrictions: http://map.comlu.com/
+        <screenie>
+        Public Transport Map Innsbruck: http://simon04.github.com/POImap/ivb.html
+
+
+    write
+      a lot of editors are available for web, mobile and desktop use
+      Web:
+        potlatch (flash)
+        JOSM web-start
+        iD (JavaScript), in Development
+      Mobile (e.g.): full list see \href{http://wiki.openstreetmap.org/wiki/Android#OpenStreetMap_editing_features}{Android}, \href{http://wiki.openstreetmap.org/wiki/Apple_iOS#OpenStreetMap_editing_features}{iOS}
+        Vespucci: full-scale editor 
+        osmaptuner: edit existent POIs
+        OsmTracker: GPS-Tracks, Audio, Fast POI-Add
+      Desktop
+        JOSM (Java)
+        Merkaartor (C++)
+        Qgis (C++)
+        ArcGIS in newest Version
+
+  Understanding the Data(base)
+    nodes, ways, rels...
+
+    Coordinating is done over mailing lists and the Wiki
+      The wiki is the main source for information around OSM!
+
+    remember its a read-write db that anyone can edit
+      if you find an error, dont grumble, correct it! - wiki principle
+      in areas with strong community support, errors get fixed usually within hours
+
+      Where does OSM excel?
+        community strong, OSM strong
+
+
+  Ausblick: Future OSM Applications
+    hot theme: mobile routing 
+
+
+  Where do i get information?
+    -> Wiki
+    -> Mailing Lists
+    -> Lokal meetings
+      -> Timeline on start page!
+      -> osm.de community map
